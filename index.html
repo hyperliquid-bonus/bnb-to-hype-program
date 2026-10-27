@@ -1,1 +1,284 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0d">
+  <meta name="description" content="HYPE participation portal and allocation calculator.">
+  <title>HYPE | Participation Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar container">
+    <a class="brand" href="#">
+      <span class="brand-icon">H</span>
+      <span>HYPE <span class="muted">/ PARTICIPATION</span></span>
+    </a>
+
+    <nav>
+      <a href="#calculator">Calculator</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#participate">Participate</a>
+    </nav>
+
+    <a class="nav-button" href="#calculator">Get started ↗</a>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> HYPE PARTICIPATION PORTAL</div>
+        <h1>Move into<br><span>HYPE.</span></h1>
+        <p class="intro">
+          Estimate your HYPE allocation, review the participation steps,
+          and see how your BNB amount fits the available bonus tiers.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#calculator">Calculate allocation <span>↘</span></a>
+          <a class="text-link" href="#how-it-works">How it works →</a>
+        </div>
+        <div class="hero-note">◇ No wallet connection required for the described transfer flow.</div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-grid"></div>
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-symbol">H<span>•</span></div>
+        <div class="art-label"><span class="dot"></span> PARTICIPATION PORTAL</div>
+        <div class="art-bottom">HYPE <span>/</span> DIGITAL ASSETS</div>
+      </div>
+    </section>
+
+    <section class="stats container">
+      <div class="stat">
+        <small>ASSET</small>
+        <strong>HYPE</strong>
+        <span>Hyperliquid ecosystem asset</span>
+      </div>
+      <div class="stat">
+        <small>PAYMENT ASSET</small>
+        <strong>BNB</strong>
+        <span>Verify the required network</span>
+      </div>
+      <div class="stat">
+        <small>EXPECTED DELIVERY</small>
+        <strong>4–6 <i>MIN</i></strong>
+        <span>After successful participation</span>
+      </div>
+      <div class="stat">
+        <small>PARTICIPATION</small>
+        <strong>Simple</strong>
+        <span>Follow the transfer instructions</span>
+      </div>
+    </section>
+
+    <section class="section container" id="calculator">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">01 / ALLOCATION TOOL</div>
+          <h2>Calculate your HYPE.</h2>
+        </div>
+        <p>Enter your BNB amount to estimate the base allocation and bonus.</p>
+      </div>
+
+      <div class="calculator panel">
+        <div class="calculator-input">
+          <label for="bnbAmount">
+            You send
+            <span>BNB AMOUNT</span>
+          </label>
+
+          <div class="amount-field">
+            <input id="bnbAmount" type="number" min="0" step="0.01" value="10">
+            <span>BNB</span>
+          </div>
+
+          <div class="quick-amounts">
+            <button type="button" data-amount="1">1 BNB</button>
+            <button type="button" data-amount="10">10 BNB</button>
+            <button type="button" data-amount="50">50 BNB</button>
+            <button type="button" data-amount="100">100 BNB</button>
+          </div>
+
+          <div class="tier-heading">
+            <span class="dot"></span>
+            <strong id="tierLabel">20% bonus tier</strong>
+            <span id="tierRange">10–49.99 BNB</span>
+          </div>
+
+          <div class="tier-list">
+            <div class="tier-row" data-tier="0">
+              <span>Below 10 BNB</span><b>+11%</b>
+            </div>
+            <div class="tier-row active" data-tier="1">
+              <span>10–49.99 BNB</span><b>+20%</b>
+            </div>
+            <div class="tier-row" data-tier="2">
+              <span>50–99.99 BNB</span><b>+30%</b>
+            </div>
+            <div class="tier-row" data-tier="3">
+              <span>100 BNB and above</span><b>+50%</b>
+            </div>
+          </div>
+
+          <p class="fine">
+            Estimates only. The final allocation depends on the actual
+            contract rate, bonus rules, and successful processing.
+          </p>
+        </div>
+
+        <div class="calculator-result">
+          <div class="result-label">ESTIMATED TOTAL ALLOCATION</div>
+          <div class="result-total">
+            <span id="totalHype">114.36</span>
+            <small>HYPE</small>
+          </div>
+
+          <div class="breakdown">
+            <div><span>Base allocation</span><b id="baseHype">95.30 HYPE</b></div>
+            <div><span>Bonus allocation</span><b id="bonusHype">19.06 HYPE</b></div>
+            <div><span>Illustrative base rate</span><b>9.5304072 / BNB</b></div>
+          </div>
+
+          <a class="button primary full-width" href="#participate">
+            View participation details <span>↘</span>
+          </a>
+          <p class="fine">
+            This is not a live quote or a guarantee of the amount delivered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="how-it-works">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">02 / THE PROCESS</div>
+          <h2>Three simple steps.</h2>
+        </div>
+        <p>Check the payment asset, destination, and network before transferring.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step-card panel">
+          <div class="step-top"><span>STEP 01</span><span>↗</span></div>
+          <h3>Choose your amount</h3>
+          <p>Use the calculator to estimate your allocation and applicable bonus tier.</p>
+        </article>
+
+        <article class="step-card panel">
+          <div class="step-top"><span>STEP 02</span><span>⇧</span></div>
+          <h3>Send BNB</h3>
+          <p>Send only to a verified program destination on the exact supported network.</p>
+        </article>
+
+        <article class="step-card panel">
+          <div class="step-top"><span>STEP 03</span><span>✓</span></div>
+          <h3>Receive HYPE</h3>
+          <p>The stated expected delivery time is 4–6 minutes after successful participation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="participate">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">03 / PARTICIPATION DETAILS</div>
+          <h2>Review before you send.</h2>
+        </div>
+        <p>Confirm the destination and network through your trusted program channel.</p>
+      </div>
+
+      <div class="participation-panel panel">
+        <div>
+          <div class="eyebrow">BNB TRANSFER DESTINATION</div>
+          <h3>Double-check every detail.</h3>
+          <p>
+            Verify the full destination address, payment asset, and supported
+            network before sending funds. A transfer to the wrong destination
+            may be irreversible.
+          </p>
+          <div class="warning">
+            <strong>Important</strong>
+            <p>
+              Only use this address after confirming it is the correct,
+              authorized destination for your program.
+            </p>
+          </div>
+        </div>
+
+        <div class="address-card">
+          <div class="address-title"><span class="dot"></span> PROGRAM ADDRESS</div>
+          <code id="paymentAddress">0xe86d5A02d3238D996DF65BaA007b5B7f73056E51</code>
+          <button type="button" id="copyAddress" class="button primary full-width">
+            Copy address <span>▣</span>
+          </button>
+          <p id="copyStatus" class="copy-status" aria-live="polite"></p>
+          <div class="address-meta">
+            <span>Payment asset <b>BNB</b></span>
+            <span>Expected delivery <b>4–6 min</b></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container faq-section">
+      <div>
+        <div class="eyebrow">04 / IMPORTANT DETAILS</div>
+        <h2>Clarity before<br>every transfer.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details open>
+          <summary>Do I need to connect my wallet?</summary>
+          <p>
+            No wallet connection is required for the described flow.
+            You initiate the transfer from your own wallet.
+          </p>
+        </details>
+        <details>
+          <summary>When should I receive HYPE?</summary>
+          <p>
+            The stated expected delivery time is 4–6 minutes after successful
+            participation. Network conditions and processing can affect timing.
+          </p>
+        </details>
+        <details>
+          <summary>Are calculator results guaranteed?</summary>
+          <p>
+            No. The calculator is an estimate using the displayed base rate
+            and bonus tiers. Confirm the actual contract configuration.
+          </p>
+        </details>
+        <details>
+          <summary>What should I verify?</summary>
+          <p>
+            Verify the destination address, network, payment asset, and program
+            terms. Never share your seed phrase or private keys.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <a class="brand" href="#"><span class="brand-icon">H</span> HYPE <span class="muted">/ PARTICIPATION</span></a>
+      <p>Use care when sending digital assets. Transfers may be irreversible.</p>
+      <a href="https://hyperfoundation.org/" target="_blank" rel="noopener noreferrer">Hyper Foundation ↗</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> HYPE Participation Portal</span>
+      <span>This page is not represented as the official Hyperliquid website.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
